@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-[#333333];
+  }
+}
+
+@layer components {
+  .animate-tilt {
+    animation: tilt 10s infinite linear;
+  }
+}
+
+@keyframes tilt {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.5deg);
+  }
+  75% {
+    transform: rotate(-0.5deg);
+  }
+}
+
+@layer utilities {
+  .bg-gradient-overlay {
+    background: linear-gradient(
+      45deg,
+      rgba(77, 208, 225, 0.1),
+      rgba(255, 111, 97, 0.1)
+    );
+  }
+}
